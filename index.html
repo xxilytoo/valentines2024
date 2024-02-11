@@ -17,12 +17,26 @@
             <audio id="player" autoplay loop>
               <source src="audios/valentinesong.mp3" type="audio/mp3">
             </audio>
-            <div class = "valentine-letter">
-              <div class = "envelope"></div>
-              <div class = "heart"></div>
-              <div class = "text"></div>
+        </div>
+        <div class="envelope-container">
+          <!--envelope code-->
+          <div class="letter-image">
+            <div class="animated-mail">
+                <div class="back-fold"></div>
+                <div class="letter">
+                    <div class="letter-context-body">
+                        <p><strong>亲爱的,<br>祝你情人节快乐！</strong><br> 我每一天每一个瞬间都会回忆我们的点点滴滴！</p>
+                    </div>
+                    <div class="letter-stamp">
+                        <div class="letter-stamp-inner"></div>
+                    </div>
+                </div>
+                <div class="top-fold"></div>
+                <div class="body"></div>
+                <div class="left-fold"></div>
             </div>
-            
+            <div class="shadow"></div>
+          </div>
         </div>
         
         <!--background code credit to yuanchuan-->
@@ -38,7 +52,7 @@
             
             :after, :before {
               content: '';
-              background: @p(--color); 
+              background: @p(red); 
               @place: @r(100%) @r(100%);
               @size: @r(6px);
               @shape: heart;
