@@ -182,9 +182,34 @@ input#open {
 }
 
 .text-one:after {
-  content:"我每一天每一个瞬间都会回忆我们的点点滴滴.";
+  content:"你是爱的中心。";
   top:60px;
+  font-size: 1.6rem;
 }
+
+.woaini{
+  position: relative;
+  top:135px;
+  font-size:smaller;
+}
+
+.woaini:before,
+.woaini:after {
+  position: relative;
+  left: 5px;
+  text-align: center;
+  width: 300px;
+}
+
+.woaini:after {
+  font-size:medium;
+  content: "PS:把上一句倒回来读一下。待会儿见!";
+  top: 0px;
+  color: #d04e4e;
+}
+
+
+
 
 .heart {
   position: relative;
@@ -223,7 +248,7 @@ input#open {
   background-color: #333;
   z-index:1;
   border-radius: 0 0 100px 100px;
-  top:200px;
+  top:240px;
   left:135px;
   overflow: hidden;
 }
@@ -246,11 +271,28 @@ input#open {
   width:10px;
   height:10px;
   z-index:1;
-  top:190px;
+  top:220px;
   left:165px;
   box-shadow: -40px 0 #333;
   transform-origin: 50%;
   animation: close 2s infinite;
+}
+
+.typing-animation:before{
+  overflow: hidden;
+  border-right: .15em #fff0f3;
+  white-space: nowrap;
+  animation: typing 8s steps(20, end) forwards;
+  font-size: 1.6rem;
+  width: 0;
+}
+
+.typing-animation:after{
+  overflow: hidden;
+  border-right: .15em #fff0f3;
+  white-space: nowrap;
+  animation: typing 10s steps(20, end) forwards;
+  width: 0;
 }
 
 @keyframes close {
@@ -268,5 +310,19 @@ input#open {
   }
   25%, 60% {
     transform: scale(1.1) rotate(-45deg);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes typingAfter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
