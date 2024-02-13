@@ -1,0 +1,95 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="personalstyle.css">
+        <link rel="stylesheet" href="assets/ZCOOLKuaiLe-Regular.ttf">
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1 class="titleintro">情人节快乐</h1>
+            <audio id="player" autoplay loop>
+              <source src="audios/valentinesong.mp3" type="audio/mp3">
+            </audio>
+        </div>
+          <!--envelope code (edited from original) Credits to Lena Stanley-->
+          <div class="envelope-container">
+            <div class="valentines-day-card">
+              <input id="open" type="checkbox">
+              <label class="open" for="open"></label>
+            <div class="card-front">
+              <div class="note">请点开你的爱情信！</div>
+            </div>
+              
+              <div class="card-inside">
+                <div class="text-one typing-animation">亲爱的</div>
+                <div class="woaini typing-animation"></div>
+                <div class="heart"></div>
+                <div class="smile"></div>
+                <div class="eyes"></div>
+            </div>
+            </div>
+          </div>
+        
+        <!--background code credit to yuanchuan-->
+        <css-doodle><style>
+            --color: #51eaea, #fffde1, #ff9d76, #FB3569;
+          
+            @grid: 30x1 / 100vw 100vh / #270f34; 
+            
+            :container {
+              perspective: 30vmin;
+              --deg: @p(-180deg, 180deg);
+            }
+            
+            :after, :before {
+              content: '';
+              background: @p(red); 
+              @place: @r(100%) @r(100%);
+              @size: @r(6px);
+              @shape: heart;
+            }
+          
+            @place: center;
+            @size: 18vmin; 
+          
+            box-shadow: @m2(0 0 50px @p(--color));
+            background: @m100(
+              radial-gradient(@p(--color) 50%, transparent 0) 
+              @r(-20%, 120%) @r(-20%, 100%) / 1px 1px
+              no-repeat
+            );
+          
+            will-change: transform, opacity;
+            animation: scale-up 12s linear infinite;
+            animation-delay: calc(-12s / @I * @i);
+          
+            @keyframes scale-up {
+              0%, 95.01%, 100% {
+                transform: translateZ(0) rotate(0);
+                opacity: 0;
+              }
+              10% { 
+                opacity: 1; 
+              }
+              95% {
+                transform: 
+                  translateZ(35vmin) rotateZ(var(--deg));
+              }
+            }
+          </style></css-doodle>
+        <!--end of background code-->
+        <script src="animationcontrol.js"></script>
+        <script src="audiocontrol.js"></script>
+        <script src="https://unpkg.com/css-doodle@0.34.0/css-doodle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
